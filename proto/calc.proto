@@ -1,0 +1,36 @@
+syntax = "proto3";
+package calculator;
+option go_package = "github.com/Oleg-Neevin/distributed_calculator_final/proto";
+
+message TaskRequest {
+  // Пустой запрос от агента
+}
+
+// Задача от аркестратора
+message Task {
+    int32 id = 1;
+    double arg1 = 2;
+    double arg2 = 3;
+    string operation = 4;
+    int32 operation_time = 5;
+    bool has_task = 6;
+}
+
+// Результат от агента
+message TaskResult {
+  int32 id = 1;
+  double result = 2;
+}
+
+message TaskResponse {
+  bool success = 1;
+}
+
+// Сервис для взаимодействия агента с оркестратором
+service TaskService {
+  // Получение задачи агентом
+  rpc GetTask (TaskRequest) returns (Task);
+  
+  // Отправка результата выполнения задачи
+  rpc SendTaskResult (TaskResult) returns (TaskResponse);
+}

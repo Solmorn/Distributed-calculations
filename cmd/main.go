@@ -31,6 +31,6 @@ func main() {
 
 	go agent.StartAgent()
 
-	orchestrator.RunOrchestrator()
+	orch.RunOrchestrator()
 
 }
