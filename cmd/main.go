@@ -6,9 +6,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/Oleg-Neevin/distributed_calculator_final/internal/agent"
-	"github.com/Oleg-Neevin/distributed_calculator_final/internal/db"
-	"github.com/Oleg-Neevin/distributed_calculator_final/internal/orchestrator"
+	"github.com/Solmorn/Distributed-calculations/internal/agent"
+	"github.com/Solmorn/Distributed-calculations/internal/db"
 )
 
 func main() {
