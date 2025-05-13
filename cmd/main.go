@@ -8,6 +8,7 @@ import (
 
 	"github.com/Solmorn/Distributed-calculations/internal/agent"
 	"github.com/Solmorn/Distributed-calculations/internal/db"
+	"github.com/Solmorn/Distributed-calculations/internal/orch"
 )
 
 func main() {
